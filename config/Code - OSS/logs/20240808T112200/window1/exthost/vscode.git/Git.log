@@ -1,0 +1,90 @@
+2024-08-08 11:22:04.838 [info] Log level: Info
+2024-08-08 11:22:04.838 [info] Validating found git in: "git"
+2024-08-08 11:22:04.838 [info] Using git "2.45.2" from "git"
+2024-08-08 11:22:04.838 [info] > git rev-parse --show-toplevel [39ms]
+2024-08-08 11:22:04.838 [info] > git rev-parse --git-dir --git-common-dir [3ms]
+2024-08-08 11:22:04.838 [info] Open repository: /home/yeipi/dots-JP
+2024-08-08 11:22:04.838 [info] > git rev-parse --show-toplevel [5ms]
+2024-08-08 11:22:04.838 [info] > git config --get commit.template [9ms]
+2024-08-08 11:22:04.848 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-08-08 11:22:04.849 [info] > git rev-parse --show-toplevel [7ms]
+2024-08-08 11:22:04.854 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:22:04.855 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2024-08-08 11:22:04.895 [info] > git status -z -uall [36ms] (cancelled)
+2024-08-08 11:22:05.344 [info] > git check-ignore -v -z --stdin [1ms]
+2024-08-08 11:22:07.994 [info] > git check-ignore -v -z --stdin [2ms]
+2024-08-08 11:22:11.787 [info] > git check-ignore -v -z --stdin [2ms]
+2024-08-08 11:22:56.368 [info] > git config --get commit.template [9ms]
+2024-08-08 11:22:56.369 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2024-08-08 11:22:56.374 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:22:56.376 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2024-08-08 11:22:56.396 [info] > git status -z -uall [16ms]
+2024-08-08 11:22:56.490 [info] > git merge-base refs/heads/main refs/remotes/origin/main [6ms]
+2024-08-08 11:22:56.495 [info] > git merge-base refs/heads/main refs/remotes/origin/main [76ms]
+2024-08-08 11:22:56.505 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [4ms]
+2024-08-08 11:22:56.510 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [15ms]
+2024-08-08 11:22:56.514 [info] > git diff --name-status -z --diff-filter=ADMR e73606cd7228133fffcce06f7e384edbc814e91f...refs/remotes/origin/main [5ms]
+2024-08-08 11:22:56.785 [info] > git merge-base refs/heads/main refs/remotes/origin/main [1ms]
+2024-08-08 11:22:56.789 [info] > git diff --name-status -z --diff-filter=ADMR e73606cd7228133fffcce06f7e384edbc814e91f...refs/remotes/origin/main [276ms]
+2024-08-08 11:22:56.790 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [1ms]
+2024-08-08 11:22:56.880 [info] > git merge-base refs/heads/main refs/remotes/origin/main [64ms]
+2024-08-08 11:22:56.886 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [1ms]
+2024-08-08 11:22:57.597 [info] > git check-ignore -v -z --stdin [2ms]
+2024-08-08 11:23:30.138 [info] > git add -A -- . [20384ms]
+2024-08-08 11:23:30.201 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [58ms]
+2024-08-08 11:23:30.205 [info] > git config --get commit.template [1ms]
+2024-08-08 11:23:30.211 [info] > git config --get commit.template [1ms]
+2024-08-08 11:23:30.215 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-08-08 11:23:30.218 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:23:30.219 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-08-08 11:23:30.233 [info] > git status -z -uall [10ms]
+2024-08-08 11:23:30.263 [info] > git merge-base refs/heads/main refs/remotes/origin/main [25ms]
+2024-08-08 11:23:30.272 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [4ms]
+2024-08-08 11:23:30.277 [info] > git diff --name-status -z --diff-filter=ADMR e73606cd7228133fffcce06f7e384edbc814e91f...refs/remotes/origin/main [1ms]
+2024-08-08 11:23:30.375 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2024-08-08 11:23:30.383 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [2ms]
+2024-08-08 11:23:46.196 [info] > git push origin main:main [15934ms]
+2024-08-08 11:23:46.196 [info] remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/juanpemedina/dots-JP.git/'
+2024-08-08 11:23:46.213 [info] > git config --get commit.template [8ms]
+2024-08-08 11:23:46.214 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2024-08-08 11:23:46.217 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:23:46.219 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2024-08-08 11:23:46.243 [info] > git status -z -uall [19ms]
+2024-08-08 11:23:46.257 [info] > git config --get commit.template [1ms]
+2024-08-08 11:23:46.263 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-08-08 11:23:46.269 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:23:46.270 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-08-08 11:23:46.287 [info] > git status -z -uall [13ms]
+2024-08-08 11:34:07.373 [info] > git log --oneline --cherry main...main@{upstream} -- [1ms]
+2024-08-08 11:34:23.226 [info] > git pull --tags origin main [15848ms]
+2024-08-08 11:34:23.226 [info] From https://github.com/juanpemedina/dots-JP
+ * branch            main       -> FETCH_HEAD
+2024-08-08 11:34:39.084 [info] > git push origin main:main [15850ms]
+2024-08-08 11:34:39.084 [info] remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/juanpemedina/dots-JP.git/'
+2024-08-08 11:34:39.098 [info] > git config --get commit.template [8ms]
+2024-08-08 11:34:39.099 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2024-08-08 11:34:39.106 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:34:39.108 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2024-08-08 11:34:39.132 [info] > git status -z -uall [18ms]
+2024-08-08 11:35:26.492 [info] > git push origin main:main [15626ms]
+2024-08-08 11:35:26.492 [info] remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/juanpemedina/dots-JP.git/'
+2024-08-08 11:35:26.499 [info] > git config --get commit.template [3ms]
+2024-08-08 11:35:26.500 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2024-08-08 11:35:26.502 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:35:26.503 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-08-08 11:35:26.513 [info] > git status -z -uall [8ms]
+2024-08-08 11:36:38.013 [info] > git log --oneline --cherry main...main@{upstream} -- [1ms]
+2024-08-08 11:36:53.512 [info] > git pull --tags origin main [15495ms]
+2024-08-08 11:36:53.512 [info] From https://github.com/juanpemedina/dots-JP
+ * branch            main       -> FETCH_HEAD
+2024-08-08 11:37:09.204 [info] > git push origin main:main [15685ms]
+2024-08-08 11:37:09.204 [info] remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/juanpemedina/dots-JP.git/'
+2024-08-08 11:37:09.214 [info] > git config --get commit.template [2ms]
+2024-08-08 11:37:09.215 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-08-08 11:37:09.220 [warning] ENOENT: no such file or directory, open '/home/yeipi/dots-JP/.git/refs/remotes/origin/main'
+2024-08-08 11:37:09.221 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-08-08 11:37:09.233 [info] > git status -z -uall [8ms]

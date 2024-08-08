@@ -1,0 +1,7 @@
+allow_images=true
+show=drun
+width=30%
+lines=8
+line_wrap=word
+allow_markup=true
+image_size=45

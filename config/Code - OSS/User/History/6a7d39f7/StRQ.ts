@@ -1,0 +1,24 @@
+import axios, { AxiosError } from "axios";
+
+const LOGIN_URL = "/#/login"; // Define login URL here
+
+const checkAuth = async () => {
+  try {
+    await axios.get("/api/user", { withCredentials: true }); // Assuming you have a base URL set up
+    return true;
+  } catch (error: unknown) {
+    if ((error as AxiosError).response && (error as AxiosError).response?.status === 401) {
+      console.error("Unauthorized access");
+      redirectToLogin();
+    } else {
+      console.error("Error while checking authentication:");
+    }
+    return false;
+  }
+};
+
+const redirectToLogin = () => {
+  window.location.href = LOGIN_URL;
+};
+
+export default checkAuth;

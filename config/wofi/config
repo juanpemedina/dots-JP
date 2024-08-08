@@ -1,0 +1,8 @@
+show=drun
+allow_images=true
+image_size=40
+width=45%
+lines=6
+line_wrap=word
+show_all=true
+sort_order=default

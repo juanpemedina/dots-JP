@@ -1,0 +1,19 @@
+2024-08-08 11:22:02.755 [info] Extension host with pid 6028 started
+2024-08-08 11:22:02.755 [info] Skipping acquiring lock for /home/yeipi/.config/Code - OSS/User/workspaceStorage/e50ccd93d13498d9d8cc2f6e7f85dd46.
+2024-08-08 11:22:02.770 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-08-08 11:22:02.774 [info] ExtensionService#_doActivateExtension hbenl.test-adapter-converter, startup: true, activationEvent: '*', root cause: hbenl.vscode-test-explorer
+2024-08-08 11:22:02.782 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-08-08 11:22:02.794 [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer, startup: true, activationEvent: '*'
+2024-08-08 11:22:02.818 [info] Eager extensions activated
+2024-08-08 11:22:02.888 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-08-08 11:22:02.890 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-08-08 11:22:02.895 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-08-08 11:22:04.696 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-08-08 11:22:04.752 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2024-08-08 11:22:04.765 [info] ExtensionService#_doActivateExtension hbenl.vscode-jasmine-test-adapter, startup: false, activationEvent: '*'
+2024-08-08 11:22:04.787 [info] ExtensionService#_doActivateExtension LaurentTreguier.vscode-simple-icons, startup: false, activationEvent: '*'
+2024-08-08 11:22:04.795 [info] ExtensionService#_doActivateExtension phil294.git-log--graph, startup: false, activationEvent: 'onStartupFinished'
+2024-08-08 11:22:04.869 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-08-08 11:22:56.463 [warning] [Decorations] CAPPING events from decorations provider vscode.git 6653
+2024-08-08 11:23:30.251 [warning] [Decorations] CAPPING events from decorations provider vscode.git 6653
+2024-08-08 11:23:45.927 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'

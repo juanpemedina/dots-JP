@@ -1,0 +1,1 @@
+{"version":3,"url_overrides":{"newTabURL":{"initialValue":"about:newtab","precedenceList":[{"id":"automation-extension@cypress.io","installDate":1716601690887,"value":"moz-extension://a396ab20-04d5-4cea-aeba-094aec60cf32/newtab.html","enabled":true}]}},"tabHideNotification":{},"homepageNotification":{},"default_search":{},"newTabNotification":{},"prefs":{},"commands":{}}

@@ -1,0 +1,25 @@
+from django.contrib import admin
+from django.urls import include, path
+from rest_framework import routers
+from database.views import (
+    UserRegistrationAPIView,
+    UserLoginAPIView,
+    UserViewAPI,
+    UserLogoutViewAPI,
+    IncomingViewSet,
+    UserRoleAPIView
+)
+
+router = routers.SimpleRouter()
+router.register(r"incomings", IncomingViewSet)
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
+    ## REGISTER, LOGIN, USER, LOGOUT, USER_ROLE PATH
+    path('api/user/register/', UserRegistrationAPIView.as_view()),
+    path('api/user/login/', UserLoginAPIView.as_view()),
+    path('api/user/', UserViewAPI.as_view()),
+    path('api/user/logout/', UserLogoutViewAPI.as_view()),
+        path('api/user/role/', UserRoleAPIView.as_view(), name='user_role'),
+]

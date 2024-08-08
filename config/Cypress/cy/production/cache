@@ -1,0 +1,12 @@
+{
+  "PROJECTS": [],
+  "PROJECT_PREFERENCES": {
+    "donaciones_front": {
+      "lastBrowser": {
+        "name": "electron",
+        "channel": "stable"
+      },
+      "testingType": "e2e"
+    }
+  }
+}

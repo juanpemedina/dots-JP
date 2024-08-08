@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.App .card{
+  background-color: beige;
+  display: inline-table;
+  margin: 15px;
+  width: 280px;
+}
+
+. img{
+  width: 100px;
+
+}

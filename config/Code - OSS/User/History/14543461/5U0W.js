@@ -1,0 +1,24 @@
+import './App.css';
+import {data} from './data';
+import { CardList } from "./components/card-list/card-list.component";
+
+function App() {
+  const [filterText, setFilterText] = useState('');
+
+  function handleChange(e) {
+    setFilterText(e.target.value);
+  }
+
+  return (
+    <div className="App">
+      <h1>Blog de Carros</h1>
+      <div className='filter'>
+        <p>Buscar por titulo</p>
+        <input type='text' value={filterText} onChange={handleChange}></input>
+      </div>
+      <CardList posts={data} text={filterText}></CardList>
+    </div>
+  );
+}
+
+export default App;

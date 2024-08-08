@@ -1,0 +1,97 @@
+*{
+ font-family: "Hack Nerd Font";
+ font-size: 11px;
+ font-weight: 600; 
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+#custom-wlogout,
+#workspaces,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#tray {
+ margin-top: 5px;
+ margin-bottom: 5px;
+ border-radius: 10px;
+ background-color: #272829;
+ color: #D6E4E5;
+}
+
+#custom-wlogout {
+ margin-left: 5px;
+ margin-right: 3px;
+ padding-left: 10px;
+ padding-right: 14px;
+ font-size: 18;
+ color: #1793D1;
+}
+
+#tray{
+  margin-right: 5px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#clock,
+#cava,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#tray {
+ padding-left: 10px;
+ padding-right: 12px;
+}
+
+
+/* Grouped items */
+#cpu {
+ padding-left: 8px;
+ padding-right: 2px;
+ margin-left: 3px;
+ border-radius: 10px 0px 0px 10px;
+}
+#memory{
+ padding-left: 4px;
+
+ border-radius: 0;
+}
+#temperature{
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* Workspaces */
+#workspaces button {
+  all: initial; /* Remove GTK theme values (waybar #1351) */
+  min-width: 0; /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+  padding: 6px 18px;
+  border-radius: 10px;
+  color: #52D3D8;
+}
+
+#workspaces button.active {
+ color: #1e1e2e;
+ background-color: #0e0e0e;
+}
+
+#workspaces button.persistent {
+ color: #52D3D8;
+}
+#workspaces button.empty {
+ color: #D6E4E5;
+}
+#workspaces button.active {
+ color: #FDE767;
+}

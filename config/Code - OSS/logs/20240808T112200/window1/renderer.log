@@ -1,0 +1,7 @@
+2024-08-08 11:22:02.385 [info] Started local extension host with pid 6028.
+2024-08-08 11:22:02.730 [error] [EricSia.pythonsnippets3]: Unknown language in `contributes.pythonsnippets3.language`. Provided value: django-html
+2024-08-08 11:22:02.730 [error] [EricSia.pythonsnippets3]: Unknown language in `contributes.pythonsnippets3.language`. Provided value: django-txt
+2024-08-08 11:22:05.156 [info] [perf] Render performance baseline is 30ms
+2024-08-08 11:37:09.765 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-08-08 11:37:09.936 [warning] [File Watcher (parcel)] Watcher shutdown because watched path got deleted (path: /home/yeipi/dots-JP)
+2024-08-08 11:37:24.085 [warning] [File Watcher (parcel)] Watcher restarts because watched path got created again (path: /home/yeipi/dots-JP)

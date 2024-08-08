@@ -1,0 +1,150 @@
+// cypress/e2e/main.cy.ts
+
+describe('Pruebas End-to-End para Movimientos Pasados', () => {
+  
+  // Función auxiliar para iniciar sesión
+  const login = () => {
+    cy.visit('http://localhost:5173/#/login'); // Navega a la página de inicio de sesión
+    cy.get('input[placeholder="Usuario"]').type('admin'); // Reemplaza 'tuUsuario' con el nombre de usuario correcto
+    cy.get('input[placeholder="Contraseña"]').type('juan20032003'); // Reemplaza 'tuContraseña' con la contraseña correcta
+    cy.get('button').contains('Ingresar').click();
+  };
+
+  beforeEach(() => {
+    // Inicia sesión antes de cada prueba
+    login();
+  });
+
+  // Prueba de Registro y Visualización de un Préstamo
+  it('Debería registrar un préstamo y mostrarlo en movimientos pasados', () => {
+    cy.visit('http://localhost:5173/#/movimientos'); // Navega a la página de movimientos pasados
+    cy.get('button').contains('Préstamos').click(); // Selecciona la pestaña de préstamos
+
+    // Simula la creación de un nuevo préstamo
+    cy.visit('/prestamos');
+    cy.get('[data-cy=crear-prestamo]').click();
+    cy.get('[data-cy=articulo]').type('Muleta');
+    cy.get('[data-cy=cantidad]').type('1');
+    cy.get('[data-cy=numero-expediente]').type('1234');
+    cy.get('[data-cy=voluntario]').type('Patricia');
+    cy.get('[data-cy=guardar]').click();
+
+    // Verificación de que el préstamo se muestra en movimientos pasados
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Préstamos').click();
+    cy.get('table').contains('td', 'Muleta').should('exist');
+  });
+
+
+/////////////////////////////////
+
+
+
+
+
+  // Prueba de Registro y Visualización de una Entrada
+  it('Debería registrar una entrada y mostrarla en movimientos pasados', () => {
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Entradas').click(); // Selecciona la pestaña de entradas
+
+    // Simula la creación de una nueva entrada
+    cy.visit('/entrada');
+    cy.get('[data-cy=crear-entrada]').click();
+    cy.get('[data-cy=articulo]').type('Silla de Ruedas');
+    cy.get('[data-cy=cantidad]').type('2');
+    cy.get('[data-cy=donante]').type('Empresa XYZ');
+    cy.get('[data-cy=voluntario]').type('Liliana');
+    cy.get('[data-cy=guardar]').click();
+
+    // Verificación de que la entrada se muestra en movimientos pasados
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Entradas').click();
+    cy.get('table').contains('td', 'Silla de Ruedas').should('exist');
+  });
+
+  // Prueba de Registro y Visualización de una Salida
+  it('Debería registrar una salida y mostrarla en movimientos pasados', () => {
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Salidas').click(); // Selecciona la pestaña de salidas
+
+    // Simula la creación de una nueva salida
+    cy.visit('/salida');
+    cy.get('[data-cy=crear-salida]').click();
+    cy.get('[data-cy=articulo]').type('Edredón');
+    cy.get('[data-cy=cantidad]').type('5');
+    cy.get('[data-cy=numero-expediente]').type('3419');
+    cy.get('[data-cy=voluntario]').type('Felipe');
+    cy.get('[data-cy=guardar]').click();
+
+    // Verificación de que la salida se muestra en movimientos pasados
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+    cy.get('table').contains('td', 'Edredón').should('exist');
+  });
+
+  // Prueba de Valores Nulos o Vacíos
+  it('Debería manejar correctamente valores nulos o vacíos', () => {
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+
+    // Simula la creación de una nueva salida con valores nulos o vacíos
+    cy.visit('/salida');
+    cy.get('[data-cy=crear-salida]').click();
+    cy.get('[data-cy=articulo]').type(''); // Campo vacío
+    cy.get('[data-cy=cantidad]').type('1');
+    cy.get('[data-cy=numero-expediente]').type(''); // Campo vacío
+    cy.get('[data-cy=voluntario]').type('Ana Torres');
+    cy.get('[data-cy=guardar]').click();
+
+    // Verificación de que los valores nulos o vacíos se manejan correctamente
+    cy.visit('/http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+    cy.get('table tr:last-child td').eq(0).should('be.empty'); // Columna de artículo vacía
+    cy.get('table tr:last-child td').eq(2).should('be.empty'); // Columna de número de expediente vacía
+  });
+
+  // Prueba de Verificación de Salidas
+  it('Debería mostrar correctamente los registros de transacciones pasadas', () => {
+    cy.visit('http://localhost:5173/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+
+    // Verificación de que la tabla muestra los registros correctos
+    cy.get('table').within(() => {
+      cy.contains('td', 'Muleta').should('exist');
+      cy.contains('td', 'Silla de Ruedas').should('exist');
+      cy.contains('td', 'Edredón').should('exist');
+    });
+  });
+
+  // Prueba de Ordenamiento
+  it('Debería ordenar las transacciones pasadas por fecha', () => {
+    cy.visit('/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+
+    // Verificación de que la tabla está ordenada por fecha
+    let previousDate: Date | null = null;
+    cy.get('table tr').each(($row) => {
+      const dateText = $row.find('td').eq(3).text();
+      const currentDate = new Date(dateText);
+      if (previousDate) {
+        expect(currentDate).to.be.gte(previousDate);
+      }
+      previousDate = currentDate;
+    });
+  });
+
+  // Prueba de Manejo de Zonas Horarias y Fechas Especiales
+  it('Debería manejar correctamente las zonas horarias y fechas especiales', () => {
+    cy.visit('/#/movimientos');
+    cy.get('button').contains('Salidas').click();
+
+    // Verificación de que las fechas se muestran correctamente según la zona horaria
+    cy.get('table tr').each(($row) => {
+      const dateText = $row.find('td').eq(3).text();
+      const date = new Date(dateText);
+      // Supongamos que la zona horaria esperada es GMT-5
+      const expectedTimezoneOffset = -5 * 60; // en minutos
+      expect(date.getTimezoneOffset()).to.eq(expectedTimezoneOffset);
+    });
+  });
+});

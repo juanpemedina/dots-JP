@@ -1,0 +1,47 @@
+2024-07-20 22:34:38.314 [info] Extension host with pid 3997 started
+2024-07-20 22:34:38.314 [info] Skipping acquiring lock for /home/yeipi/.config/Code - OSS/User/workspaceStorage/a398f103c74342ced308d4f3c9e8ff00.
+2024-07-20 22:34:38.402 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-20 22:34:38.410 [info] ExtensionService#_doActivateExtension batisteo.vscode-django, startup: false, activationEvent: 'onLanguage:python'
+2024-07-20 22:34:38.623 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-20 22:34:38.625 [info] ExtensionService#_doActivateExtension hbenl.test-adapter-converter, startup: true, activationEvent: '*', root cause: hbenl.vscode-jasmine-test-adapter
+2024-07-20 22:34:38.628 [info] ExtensionService#_doActivateExtension LaurentTreguier.vscode-simple-icons, startup: true, activationEvent: '*'
+2024-07-20 22:34:38.712 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-20 22:34:38.734 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-20 22:34:38.744 [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer, startup: true, activationEvent: '*', root cause: hbenl.vscode-jasmine-test-adapter
+2024-07-20 22:34:38.808 [info] ExtensionService#_doActivateExtension hbenl.vscode-jasmine-test-adapter, startup: true, activationEvent: '*'
+2024-07-20 22:34:38.855 [info] Eager extensions activated
+2024-07-20 22:34:38.875 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-20 22:34:38.876 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-20 22:34:38.882 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2024-07-20 22:34:38.900 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-20 22:34:38.933 [info] ExtensionService#_doActivateExtension phil294.git-log--graph, startup: false, activationEvent: 'onStartupFinished'
+2024-07-20 22:53:33.081 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-20 22:53:33.091 [error] Canceled: Canceled
+	at new A (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:143:50615)
+	at E.U (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:150:6007)
+	at z.<computed>.M.charCodeAt.R.CharCode.DollarSign.z.<computed> (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:150:3091)
+	at h.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:199937)
+	at h.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at I.registerCommand.description (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:198699)
+	at h (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:200476)
+	at h.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:199468)
+	at h.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:153:199375)
+	at Object.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:163:22742)
+	at TestExplorer.updateVisibility (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-test-explorer-2.21.1-universal/out/testExplorer.js:334:25)
+	at TestExplorer.unregisterTestAdapter (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-test-explorer-2.21.1-universal/out/testExplorer.js:64:18)
+	at TestHub.unregisterTestAdapter (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-test-explorer-2.21.1-universal/out/hub/testHub.js:68:37)
+	at Object.unregisterTestAdapter (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-test-explorer-2.21.1-universal/out/main.js:107:47)
+	at TestAdapterRegistrar.remove (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-jasmine-test-adapter-1.8.2-universal/node_modules/vscode-test-adapter-util/out/registrar.js:55:26)
+	at TestAdapterRegistrar.dispose (/home/yeipi/.vscode-oss/extensions/hbenl.vscode-jasmine-test-adapter-1.8.2-universal/node_modules/vscode-test-adapter-util/out/registrar.js:62:18)
+	at f (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at u.eb (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:159:9991)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:159:7867
+	at Array.map (<anonymous>)
+	at u.$ (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:159:7854)
+	at u.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:159:8127)
+	at f.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:163:1513)
+	at t (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:176:10459)
+	at MessagePortMain.<anonymous> (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:176:6675)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-07-20 22:53:33.091 [info] Extension host with pid 3997 exiting with code 0

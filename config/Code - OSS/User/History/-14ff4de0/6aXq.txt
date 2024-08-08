@@ -1,0 +1,69 @@
+// Una prueba de una donación de entrada
+it("Búsqueda de donacion de entrada", () => {
+    cy.visit("/#/entradas");
+    cy.wait(1000);
+    cy.get('input[placeholder="Buscar"]').type("Donante Test");
+    cy.get("table").should("contain", "Artículo Entrada");
+});
+// Una prueba de una donación de salida
+it("Busqueda de una salida registrada", () => {
+    cy.visit("/#/salidas");
+    cy.wait(1000);
+    cy.get('input[placeholder="Buscar"]').type("Voluntario Test 3");
+    cy.get("table").should("contain", "5678");
+});
+
+// Una prueba de valores nulos o vacíos:
+it("Busqueda de valores nulos o vacios", () => {
+    // Registra una transacción con valores nulos
+    cy.visit("/#/salida");
+    cy.get("input").first().type("1");
+    cy.contains("Continuar").click();
+    cy.get("input[name=patientNumber]").type("9999");
+    cy.get("input[name=volunteerName]").clear();
+    cy.contains("Continuar").click();
+    cy.wait(1000);
+
+    cy.visit("/#/salidas");
+    cy.get('input[placeholder="Buscar"]').type("9999");
+    cy.get("table").should("contain", "9999");
+    cy.get("table").should("contain", "");
+});
+
+// Una prueba de verificación de salidas
+it("Debería verificar la correcta visualización de transacciones pasadas", () => {
+    cy.visit("/#/salidas");
+    cy.wait(1000);
+    cy.get("table").find("tr").should("have.length.greaterThan", 1);
+});
+
+// Una prueba de ordenamiento
+it("Debería ordenar la tabla ascendentemente por fecha", () => {
+    cy.visit("/#/salidas");
+    cy.wait(1000);
+    cy.get("table th").contains("Fecha").click();
+    cy.get("table tbody tr td:nth-child(3)").then((dateElements) => {
+    const dates = Array.from(dateElements, (el) => new Date(el.innerText));
+    const sortedDates = [...dates].sort((a, b) => a - b);
+    expect(dates).to.deep.equal(sortedDates);
+    });
+});
+
+// Una prueba de manejo de zonas horarias y fechas especiales
+it("Debería manejar zonas horarias y fechas especiales", () => {
+    // Registra una transacción con una fecha especial
+    const specialDate = new Date("2023-12-25T10:00:00Z");
+    cy.visit("/#/salida");
+    cy.get("input").first().type("1");
+    cy.contains("Continuar").click();
+    cy.get("input[name=patientNumber]").type("8888");
+    cy.get("input[name=volunteerName]").type("Voluntario Especial");
+    cy.get("input[name=date]").type(specialDate.toISOString());
+    cy.contains("Continuar").click();
+    cy.wait(1000);
+
+    cy.visit("/#/salidas");
+    cy.get('input[placeholder="Buscar"]').type("Voluntario Especial");
+    cy.get("table").should("contain", "8888");
+    cy.get("table").should("contain", specialDate.toLocaleString());
+});

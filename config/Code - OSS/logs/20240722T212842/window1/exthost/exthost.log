@@ -1,0 +1,18 @@
+2024-07-22 21:28:45.366 [info] Extension host with pid 2915 started
+2024-07-22 21:28:45.366 [info] Skipping acquiring lock for /home/yeipi/.config/Code - OSS/User/workspaceStorage/a398f103c74342ced308d4f3c9e8ff00.
+2024-07-22 21:28:45.478 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-22 21:28:45.484 [info] ExtensionService#_doActivateExtension batisteo.vscode-django, startup: false, activationEvent: 'onLanguage:python'
+2024-07-22 21:28:45.762 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-22 21:28:45.763 [info] ExtensionService#_doActivateExtension hbenl.test-adapter-converter, startup: true, activationEvent: '*', root cause: hbenl.vscode-jasmine-test-adapter
+2024-07-22 21:28:45.766 [info] ExtensionService#_doActivateExtension LaurentTreguier.vscode-simple-icons, startup: true, activationEvent: '*'
+2024-07-22 21:28:45.827 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-22 21:28:45.853 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-22 21:28:45.861 [info] ExtensionService#_doActivateExtension hbenl.vscode-test-explorer, startup: true, activationEvent: '*', root cause: hbenl.vscode-jasmine-test-adapter
+2024-07-22 21:28:45.937 [info] ExtensionService#_doActivateExtension hbenl.vscode-jasmine-test-adapter, startup: true, activationEvent: '*'
+2024-07-22 21:28:45.994 [info] Eager extensions activated
+2024-07-22 21:28:46.029 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-22 21:28:46.031 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-22 21:28:46.036 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2024-07-22 21:28:46.052 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-22 21:28:46.086 [info] ExtensionService#_doActivateExtension phil294.git-log--graph, startup: false, activationEvent: 'onStartupFinished'
+2024-07-22 21:50:43.156 [info] ExtensionService#_doActivateExtension vscode.debug-server-ready, startup: false, activationEvent: 'onDebugResolve'

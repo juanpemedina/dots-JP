@@ -1,0 +1,7 @@
+extension activate
+set selected repo index 0
+workspace: repo(s) added/removed
+start observing repo /home/yeipi/dots-JP
+repo watcher: external index/head change
+start command
+create new webview panel

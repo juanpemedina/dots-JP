@@ -1,0 +1,29 @@
+import React from "react";
+
+/*
+Reusable button for confirmation or positive actions.
+*/
+
+const InteractiveButton = React.forwardRef<HTMLButtonElement, InteractiveButtonProps>(
+	function InteractiveButton({ children, onClick, type, ...props }, ref) {
+		return (
+			<button
+				{...props}
+				ref={ref}
+				type={type}
+				onClick={onClick}
+				className="text-white text-lg bg-accent-green px-2 py-2 rounded-full"
+			>
+				{children}
+			</button>
+		);
+	}
+);
+
+interface InteractiveButtonProps {
+	children: React.ReactNode;
+	type?: "submit" | "reset" | "button" | undefined;
+	onClick?: () => void;
+}
+
+export default InteractiveButton;

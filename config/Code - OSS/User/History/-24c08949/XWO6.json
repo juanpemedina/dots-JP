@@ -1,0 +1,6 @@
+{
+    "window.zoomLevel": 2,
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace,'Hack Nerd Font'",
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "toggle"
+}
