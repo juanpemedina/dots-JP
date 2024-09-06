@@ -1,1 +1,1 @@
-# dots-JP
+# dots-archLinux-Yeipi
